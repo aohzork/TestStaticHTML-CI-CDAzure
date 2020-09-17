@@ -1,0 +1,1 @@
+# TestStaticHTML-CI-CDAzure
