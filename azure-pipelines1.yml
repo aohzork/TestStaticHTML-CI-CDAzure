@@ -2,6 +2,8 @@
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
+trigger: none
+
 resources:
   pipelines:
   - pipeline: staticbuild   # Name of the pipeline resource
@@ -15,7 +17,7 @@ variables:
   dockerRegistryServiceConnection: '77b3395b-703b-4f1e-bd73-4a4b22a216fa'
   imageRepository: 'statichtmlfolder'
   containerRegistry: 'staticwithfolder.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Web/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
   
   # Agent VM image name
